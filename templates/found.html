@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Find Anime{% endblock %}
+
+{% block main %}
+    <h2>Anime Name: </h2>
+    <h3 class="font-weight-bold">{{ data["result"]["anilist"]["title"]["romaji"] }}</h3>
+    <h2>Episode: {{ data["result"]["episode"] }}</h2>
+    <h3>For more info about the anime <a href="https://anilist.co/anime/{{ data["result"]["anilist"]["id"] }}" target="_blank">click here</a></h3>
+
+    <div>
+        <img src="{{ data["result"]["image"] }}">
+    </div>
+{% endblock %}

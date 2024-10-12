@@ -1,0 +1,21 @@
+.col {
+    padding: 10px;
+    background-color: #33b5e5;
+    border: 2px solid #fff;
+    color: #fff
+}
+
+.background {
+    background-image: url(/static/Images/pattern.png);
+}
+
+.fortable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+.forthtd {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Find Anime{% endblock %}
+
+{% block main %}
+<table class="fortable">
+    <thead class="forthtd">
+        <tr>
+            <th>Anime</th>
+            <th>Date/Time</th>
+            <th></th>
+            <th></th>
+    </thead>
+    <tbody class="forthtd">
+        {% for his in history %}
+            <tr>
+                <td>{{ his["his_anime"] }}</td>
+                <td>{{ his["his_date"] }}</td>
+                <td>
+                    <form action="/found" method="post">
+                        <input name="url" type="hidden" value="{{ his["his_url"] }}">
+                        <button class="btn btn-secondary" type="submit">View</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/remove" method="post">
+                        <input name="his_id" type="hidden" value="{{ his["his_id"] }}">
+                        <button class="btn btn-secondary" type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

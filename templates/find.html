@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Find Anime{% endblock %}
+
+{% block main %}
+    <h4>The image should be accessable through a url, if it isn't already use <a href="https://freeimage.host/" target="_blank">freeimage.host</a></h4>
+    <br>
+    <form action="/find" method="post">
+        <div class="form-group w-50 mx-auto">
+            <label for="image" class="text_left">Upload a url for the screenshot</label>
+            <input type="url" class="form-control" autofocus autocomplete="off" placeholder="Image URL" id="img" name="img">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+    <br>
+    <hr>
+    <p class="font-weight-light">unfortunatly I could not figure out how to upload images and communicate them with the api so this is the work around i decided to go with</p>
+{% endblock %}

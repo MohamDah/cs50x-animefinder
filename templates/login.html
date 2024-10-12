@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    login
+{% endblock %}
+
+
+{% block main %}
+    <h1 class="mx-auto mb-5">Log in</h1>
+    <form action="/login" method="post">
+        <div class="mb-3"><input class="form-control mx-auto w-auto" type="text" autocomplete="off" autofocus id="username" placeholder="Username" name="username"></div>
+        <div class="mb-3"><input type="password" id="password" name="password" class="form-control mx-auto w-auto" placeholder="Password"></div>
+        <button type="submit" class="btn btn-primary">Log in</button>
+    </form>
+    <p class="mx-auto mt-3">By logging in you can view your result history</p>
+    <p class="mx-auto mt-3">If you don't already have an account, register through the button in the top right</p>
+{% endblock %}
